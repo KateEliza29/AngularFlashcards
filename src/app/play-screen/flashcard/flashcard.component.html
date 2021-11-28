@@ -1,0 +1,28 @@
+<div [ngClass]="frontShowing ? 'card' : 'isFlipped'">
+    <div class="cardFront">
+        <div class="cardHeader">
+            <div class="cardHeaderText">Custom Card Set</div>
+        </div>
+        <div class="cardBody" (click)="onCardClicked()">
+            <p>{{front}}</p>
+        </div>
+        <div class="cardFooter">
+            <fa-icon class="iconButton" [icon]="faHome"></fa-icon>
+            <fa-icon class="iconButton" [icon]="faUserCircle"></fa-icon>
+            <fa-icon class="iconButton" [icon]="faChartPie"></fa-icon>
+            <fa-icon class="iconButton" [icon]="faCog"></fa-icon>
+        </div>
+    </div>
+    <div class="cardBack">
+        <div class="cardHeader">
+            <div class="cardHeaderText">Custom Card Set</div>
+        </div>
+        <div class="cardBody" (click)="onCardClicked()">
+            <p>{{back}}</p>
+        </div>
+        <div class="cardFooter">
+            <fa-icon class="iconButton" [icon]="faPlusCircle"></fa-icon>
+            <fa-icon class="iconButton" [icon]="faQuestionCircle"></fa-icon>
+        </div>
+    </div>
+</div>

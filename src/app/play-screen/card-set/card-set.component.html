@@ -1,0 +1,14 @@
+
+<div class="cardSet">
+    <div *ngIf="questions.length > 0" class="scene">
+        <app-flashcard [front]="questions[questionCount].front" [back]="questions[questionCount].back"></app-flashcard>
+        <div class="arrows">
+            <fa-icon class="arrowIcons" [icon]="faChevronLeft" (click)="onLeftArrowClicked()"></fa-icon>
+            <fa-icon class="arrowIcons" [icon]="faChevronRight" (click)="onRightArrowClicked()"></fa-icon>
+        </div>
+    </div>
+    <div *ngIf="questions.length === 0" class="scene">
+        <fa-icon class="giantSmiley" [icon]="faSmile"></fa-icon>
+        <h2>Soz, no cards.</h2>
+    </div>
+</div>

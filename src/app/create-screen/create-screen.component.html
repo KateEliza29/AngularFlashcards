@@ -1,0 +1,18 @@
+
+<div class="main">
+    <div class="card">
+        <div class="cardHeader">
+            <div class="cardHeaderText">Add New Card</div>
+        </div>
+        <div class="cardBody">
+            <label for="frontText">Front Text: </label>
+            <input type="text" maxlength="250" name="frontText" [(ngModel)]="frontText"><br>
+            <label for="backText">Back Text: </label>
+            <input type="text" maxlength="250" name="frontText" [(ngModel)]="backText">
+        </div>
+        <div class="cardFooter">
+            <fa-icon class="iconButton" [icon]="faSave" (click)="onClicked()"></fa-icon>
+        </div>
+    </div>
+    <app-created-item *ngFor="let question of questions" [frontText]="question.front" [backText]="question.back"></app-created-item>
+</div>
